@@ -1,0 +1,40 @@
+/' Patron BUILDER '/
+
+@startuml
+
+class Director {
+    + Director(DocumentBuilder)
+}
+note bottom: this.builder.buildPart();
+
+interface DocumentBuilder {
+    addTitle1()
+    addTitle2()
+    addList()
+    getResult()
+}
+
+class HTMLDocument {
+    + addTitle1()
+    + addTitle2()
+    + addList()
+}
+class MarkDownDocument {
+    + addTitle1()
+    + addTitle2()
+    + addList()
+}
+
+class Product1 {
+
+}
+class Product2 {
+
+}
+
+Director *- DocumentBuilder
+DocumentBuilder <|-- HTMLDocument
+DocumentBuilder <|-- MarkDownDocument
+Product1 <... HTMLDocument
+Product2 <... MarkDownDocument
+@enduml
