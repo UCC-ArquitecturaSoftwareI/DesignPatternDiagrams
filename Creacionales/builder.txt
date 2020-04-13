@@ -1,0 +1,26 @@
+/' Patron BUILDER '/
+
+@startuml
+
+class Director {
+    + construct()
+}
+note bottom: this.builder.buildPart();
+
+interface Builder {
+    buildPart()
+}
+
+class ConcreteBuilder {
+    + buildPart()
+    + getResult()
+}
+
+class Product {
+
+}
+
+Director *- Builder
+Builder <|-- ConcreteBuilder
+Product <... ConcreteBuilder
+@enduml
