@@ -1,0 +1,24 @@
+/' Patron SINGLETON '/
+
+@startuml
+
+class SingletonLogger {
+    + static get()
+    + error()
+    + warning()
+    + debug()
+    + info()
+    - static logger
+    - log_file
+}
+
+class Test1 {
+}
+
+class Test2 {
+}
+
+Test1 <... SingletonLogger
+Test2 <... SingletonLogger
+
+@enduml

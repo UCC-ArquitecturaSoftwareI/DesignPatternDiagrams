@@ -1,0 +1,12 @@
+/' Patron SINGLETON '/
+
+@startuml
+
+class Singleton {
+    + static instance()
+    + SingletonOperation()
+    - static uniqueInstance
+    - singletonData
+}
+
+@enduml
