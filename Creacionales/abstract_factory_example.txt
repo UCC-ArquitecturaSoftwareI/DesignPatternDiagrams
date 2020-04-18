@@ -1,0 +1,58 @@
+/' Patron ABSTRACT FACTORY '/
+
+@startuml Abstract Factory
+
+skinparam Linetype ortho
+
+class Client
+
+together {
+  abstract class ThemeFactory {
+    +createButton()
+    +createTextBox()
+  }
+
+  class LightThemeFactory {
+    +createButton()
+    +createTextBox()
+  }
+
+  class DarkThemeFactory {
+    +createButton()
+    +createTextBox()
+  }
+}
+
+together {
+  abstract class Button
+  class LightTextBox
+  class LightButton
+}
+
+
+together {
+  abstract class TextBox
+  class DarkButton
+  class DarkTextBox
+}
+
+Client --> ThemeFactory
+Client --> Button
+Client --> TextBox
+
+LightThemeFactory -up-|> ThemeFactory
+DarkThemeFactory -up-|> ThemeFactory
+
+LightTextBox -up-|> Button
+LightButton -up-|> Button
+
+DarkButton -up-|> TextBox
+DarkTextBox -up-|> TextBox
+
+LightThemeFactory ...> LightTextBox
+LightThemeFactory ...> LightButton
+
+DarkThemeFactory ...> DarkButton
+DarkThemeFactory ...> DarkTextBox
+
+@enduml
