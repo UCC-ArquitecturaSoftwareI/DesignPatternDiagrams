@@ -1,0 +1,19 @@
+/' Patron PROTOTYPE '/
+
+@startuml
+
+class Shape {
+    - string type
+    - int width
+    - int height
+    + clone()
+}
+
+class Client
+
+hide empty members
+
+Client --> Shape
+
+
+@enduml

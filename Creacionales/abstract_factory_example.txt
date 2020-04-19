@@ -4,6 +4,8 @@
 
 skinparam Linetype ortho
 
+hide empty members
+
 class Client
 
 together {
@@ -25,14 +27,14 @@ together {
 
 together {
   abstract class Button
-  class LightTextBox
   class LightButton
+  class DarkButton
 }
 
 
 together {
   abstract class TextBox
-  class DarkButton
+  class LightTextBox
   class DarkTextBox
 }
 
@@ -43,10 +45,10 @@ Client --> TextBox
 LightThemeFactory -up-|> ThemeFactory
 DarkThemeFactory -up-|> ThemeFactory
 
-LightTextBox -up-|> Button
+LightTextBox -up-|> TextBox
 LightButton -up-|> Button
 
-DarkButton -up-|> TextBox
+DarkButton -up-|> Button
 DarkTextBox -up-|> TextBox
 
 LightThemeFactory ...> LightTextBox
