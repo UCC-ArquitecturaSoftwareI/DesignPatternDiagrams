@@ -3,10 +3,8 @@
 @startuml
 
 class Shape {
-    - string type
-    - int width
-    - int height
-    + clone()
+    + string type
+    + Shape* clone()
 }
 
 class Client
