@@ -1,0 +1,26 @@
+/' Patron ADAPTER '/
+
+@startuml
+
+interface Rectangle {
+    + draw()
+}
+
+class Client
+
+class RectangleAdapter {
+    + draw()
+}
+
+class LegacyRectangle {
+    + render()
+}
+
+hide empty members
+
+Rectangle <- Client
+Rectangle <|-- RectangleAdapter
+RectangleAdapter -> LegacyRectangle
+
+
+@enduml

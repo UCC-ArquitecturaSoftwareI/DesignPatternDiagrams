@@ -1,0 +1,27 @@
+/' Patron ADAPTER '/
+
+@startuml
+
+interface Adapter {
+    + operation()
+}
+
+class Client
+
+class ConcreteAdapter {
+    - adaptee
+    + operation()
+}
+
+class Adaptee {
+    + adaptedOperation()
+}
+
+hide empty members
+
+Adapter <- Client
+Adapter <|-- ConcreteAdapter
+ConcreteAdapter -> Adaptee
+
+
+@enduml
