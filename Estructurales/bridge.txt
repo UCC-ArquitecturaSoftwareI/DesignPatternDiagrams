@@ -17,11 +17,11 @@ class ConcreteImplementorB {
     + operationImpl()
 }
 
-class RedefinedAbstraction{
+class RefinedAbstraction{
   
   }
 
-Abstraction <|-- RedefinedAbstraction
+Abstraction <|-- RefinedAbstraction
 Abstraction *- Implementor
 Implementor <|-- ConcreteImplementorA
 Implementor <|-- ConcreteImplementorB
