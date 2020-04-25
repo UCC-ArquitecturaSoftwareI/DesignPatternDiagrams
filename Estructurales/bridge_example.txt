@@ -1,0 +1,31 @@
+@startuml
+/' BRIDGE '/
+
+abstract Shapes {
+    - ren : Renderer
+    + draw()
+    + resize()
+}
+
+abstract Renderer {
+    + render_circle()
+}
+
+class VectorRenderer {
+    + render_circle()
+}
+
+class RasterRenderer {
+    + render_circle()
+}
+
+class Circle{
+    + draw()
+    + resize()  
+}
+
+Shapes <|-- Circle
+Shapes *- Renderer
+Renderer <|-- VectorRenderer
+Renderer <|-- RasterRenderer
+@enduml

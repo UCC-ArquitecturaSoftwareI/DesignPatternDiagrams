@@ -1,0 +1,28 @@
+@startuml
+/' BRIDGE '/
+
+class Abstraction {
+    + operation()
+}
+
+abstract Implementor {
+    + operationImpl()
+}
+
+class ConcreteImplementorA {
+    + operationImpl()
+}
+
+class ConcreteImplementorB {
+    + operationImpl()
+}
+
+class RedefinedAbstraction{
+  
+  }
+
+Abstraction <|-- RedefinedAbstraction
+Abstraction *- Implementor
+Implementor <|-- ConcreteImplementorA
+Implementor <|-- ConcreteImplementorB
+@enduml

@@ -1,0 +1,38 @@
+@startuml
+/' BRIDGE '/
+
+class Shape {
+    + draw()
+}
+
+abstract Circle {
+    + draw()
+}
+
+abstract Rectangle {
+    + draw()
+}
+
+class CircleRaster {
+    + draw()
+}
+
+class CircleVector {
+    + draw()
+}
+class RectangleRaster {
+    + draw()
+}
+
+class RectangleVector {
+    + draw()
+}
+
+
+Shape <|-- Circle
+Shape <|-- Rectangle
+Circle <|-- CircleRaster
+Circle <|-- CircleVector
+Rectangle <|-- RectangleRaster
+Rectangle <|-- RectangleVector
+@enduml
