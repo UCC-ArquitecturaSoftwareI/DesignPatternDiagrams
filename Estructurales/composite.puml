@@ -1,0 +1,32 @@
+/' COMPOSITE '/
+
+@startuml
+
+class client{
+
+}
+abstract Component {
+    + operation()
+    + add(Component)
+    + remove(Component)
+    + getChild(int i)
+}
+
+class Leaf {
+    + operation()
+}
+
+class Composite {
+    + operation()
+    + add(Component)
+    + remove(Component)
+    + getChild(int i)
+}
+
+Component <|-- Leaf
+Component <|-- Composite
+Component --* Composite
+client -> Component
+
+
+@enduml

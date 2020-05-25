@@ -1,0 +1,30 @@
+/' DECORATOR '/
+
+@startuml
+
+abstract Shape {
+    + draw()
+}
+
+class Circle {
+    + draw()
+}
+class Square {
+    + draw()
+}
+
+class ColoredShape {
+    - Shape
+    - Color
+    + draw()
+}
+
+
+
+Shape <|- Circle
+Shape <|- Square
+Shape <|-- ColoredShape
+Shape --* ColoredShape
+
+
+@enduml

@@ -1,0 +1,36 @@
+/' COMPOSITE '/
+
+@startuml
+
+class client{
+
+}
+abstract GraphicObject {
+    + draw()
+    + add(GraphicObject)
+    + remove(GraphicObject)
+    + getChild(int i)
+}
+
+class Circle {
+    + operation()
+}
+class Square {
+    + operation()
+}
+
+class Group {
+    + operation()
+    + add(GraphicObject)
+    + remove(GraphicObject)
+    + getChild(int i)
+}
+
+GraphicObject <|-- Circle
+GraphicObject <|-- Square
+GraphicObject <|-- Group
+GraphicObject --* Group
+client -> GraphicObject
+
+
+@enduml

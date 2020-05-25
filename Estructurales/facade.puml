@@ -1,0 +1,31 @@
+/' FACADE '/
+
+@startuml
+
+class Facade
+
+package "Complex system" <<Node>> {
+    class System1
+    class System2
+    class System3
+    class System4 
+    class System5
+    class System6 
+    class System7 
+}
+
+hide empty members
+
+Facade --> System1
+Facade --> System2
+Facade --> System3
+Facade --> System4
+System1 -> System2
+System1 --> System7
+System4 --> System7
+System4 --> System5
+System3 --> System6
+System6 -> System5
+System3 -> System4
+
+@enduml
