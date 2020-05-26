@@ -1,0 +1,35 @@
+/' FLYWEIGHT '/
+
+@startuml
+
+class Bosque {
+    - Arboles a[]
+}
+
+abstract Arbol {
+    - Vector2D pos
+    - Color tint
+    - Texture tx
+}
+
+Bosque *-- Arbol
+
+hide empty members
+
+note as N1
+    <b><color:royalBlue>RAM</color></b>
+    Vector2D: 8 Bytes
+    Color:    4 Bytes
+    Texture:  31.7 Kbytes
+    ---
+    Total 32Kbytes
+    x 10.000 Arboles
+    ---
+    320 MBytes
+end note
+
+Arbol <= N1
+
+
+
+@enduml

@@ -1,0 +1,31 @@
+/' FLYWEIGHT '/
+
+@startuml
+
+class ArbolFactory {
+    - ArbolUnique arboles[]
+    + getArbol()
+}
+
+class Client
+
+class ArbolUnique {
+    - Texture
+    + operation(in extrinsicState)
+}
+
+class Arbol {
+    - Vector2D pos
+    - Color tint
+    - *ArbolUnique
+    + operation(in extrinsicState)
+}
+
+hide empty members
+
+Client --> ArbolFactory
+Client --> Arbol
+Arbol -> ArbolFactory
+ArbolFactory *-- ArbolUnique
+
+@enduml
