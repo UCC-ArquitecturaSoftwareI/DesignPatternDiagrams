@@ -1,0 +1,25 @@
+/' FLYWEIGHT '/
+
+@startuml
+
+Title Patron Proxy
+
+interface Subject{
+    + void doAction()
+}
+
+class RealSubject implements Subject{
+    + void doAction()
+}
+
+class Proxy implements Subject{
+    + void doAction()
+}
+
+Proxy --> RealSubject: delegate
+
+class Client
+
+Client --> Subject
+
+@enduml
