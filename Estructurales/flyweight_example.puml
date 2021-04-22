@@ -1,6 +1,7 @@
 /' FLYWEIGHT '/
 
 @startuml
+!include ../format.puml
 
 class ArbolFactory {
     - ArbolUnique arboles[]
@@ -20,8 +21,6 @@ class Arbol {
     - *ArbolUnique
     + operation(in extrinsicState)
 }
-
-hide empty members
 
 Client --> ArbolFactory
 Client --> Arbol

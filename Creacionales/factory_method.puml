@@ -1,6 +1,7 @@
 /' Patron FACTORY METHOD '/
 
 @startuml
+!include ../format.puml
 
 class Creator {
     + factoryMethod()
@@ -14,8 +15,6 @@ class ConcreteCreator {
 interface Product
 
 class ConcreteProduct
-
-hide empty members
 
 Product <|-- ConcreteProduct
 Creator <|-- ConcreteCreator

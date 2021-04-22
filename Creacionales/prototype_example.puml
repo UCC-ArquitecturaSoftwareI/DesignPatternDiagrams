@@ -1,6 +1,7 @@
 /' Patron PROTOTYPE '/
 
 @startuml
+!include ../format.puml
 
 class Shape {
     + string type
@@ -9,7 +10,6 @@ class Shape {
 
 class Client
 
-hide empty members
 
 Client --> Shape
 

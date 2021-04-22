@@ -1,8 +1,8 @@
 /' FLYWEIGHT '/
 
 @startuml
-
-Title Patron Proxy
+Title Patrón Proxy
+!include ../format.puml
 
 interface Subject{
     + void doAction()

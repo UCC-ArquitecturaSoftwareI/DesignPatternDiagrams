@@ -1,7 +1,7 @@
 /' Patron ABSTRACT FACTORY '/
 
 @startuml Abstract Factory
-
+!include ../format.puml
 skinparam Linetype ortho
 
 hide empty members

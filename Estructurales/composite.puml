@@ -1,6 +1,7 @@
 /' COMPOSITE '/
 
 @startuml
+!include ../format.puml
 
 class client{
 

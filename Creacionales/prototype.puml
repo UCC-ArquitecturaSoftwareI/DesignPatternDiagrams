@@ -1,6 +1,7 @@
 /' Patron PROTOTYPE '/
 
 @startuml
+!include ../format.puml
 
 interface Prototype {
     + clone()
@@ -15,8 +16,6 @@ class ConcretePrototype1 {
 class ConcretePrototype2 {
     + clone()
 }
-
-hide empty members
 
 Client --> Prototype
 Prototype <|-- ConcretePrototype1

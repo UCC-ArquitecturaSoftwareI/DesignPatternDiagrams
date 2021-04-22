@@ -1,6 +1,7 @@
 /' Patron SINGLETON '/
 
 @startuml
+!include ../format.puml
 
 class SingletonLogger {
     + static get()

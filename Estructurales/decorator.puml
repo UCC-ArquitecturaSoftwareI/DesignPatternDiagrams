@@ -1,6 +1,7 @@
 /' DECORATOR '/
 
 @startuml
+!include ../format.puml
 
 abstract Component {
     + operation()

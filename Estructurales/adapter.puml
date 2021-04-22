@@ -1,6 +1,7 @@
 /' Patron ADAPTER '/
 
 @startuml
+!include ../format.puml
 
 interface Adapter {
     + operation()
@@ -16,8 +17,6 @@ class ConcreteAdapter {
 class Adaptee {
     + adaptedOperation()
 }
-
-hide empty members
 
 Adapter <- Client
 Adapter <|-- ConcreteAdapter

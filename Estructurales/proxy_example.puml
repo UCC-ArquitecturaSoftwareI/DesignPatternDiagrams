@@ -1,0 +1,28 @@
+@startuml
+!include ../format.puml
+
+Title Proxy Virtual
+
+interface Image {
+    + void draw()
+}
+
+class RealImage implements Image{
+    - Bitmap image
+    + RealImage(String path)
+    + void draw()
+}
+
+class ProxyImage implements Image{
+    - string filePath
+    - RealImage image
+    + ProxyImage(String path)
+    + void draw()
+}
+
+ProxyImage --> RealImage
+
+note right of RealImage::RealImage
+   Operación costosa
+end note
+@enduml

@@ -14,8 +14,6 @@ abstract Arbol {
 
 Bosque *-- Arbol
 
-hide empty members
-
 note as N1
     <b><color:royalBlue>RAM</color></b>
     Vector2D: 8 Bytes

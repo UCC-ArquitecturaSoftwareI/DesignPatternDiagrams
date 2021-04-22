@@ -1,6 +1,7 @@
 /' Patron FACTORY METHOD '/
 
 @startuml
+!include ../format.puml
 
 interface Imagen{
   - string data

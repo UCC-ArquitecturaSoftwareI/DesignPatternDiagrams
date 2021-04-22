@@ -1,6 +1,7 @@
 /' FLYWEIGHT '/
 
 @startuml
+!include ../format.puml
 
 class FlyweightFactory {
     + getFlyweight()
@@ -21,8 +22,6 @@ class UnsharedConcreteFlyweight {
     - allState
     + operation(in extrinsicState)
 }
-
-hide empty members
 
 FlyweightFactory *- Flyweight
 Flyweight <|-- ConcreteFlyweight

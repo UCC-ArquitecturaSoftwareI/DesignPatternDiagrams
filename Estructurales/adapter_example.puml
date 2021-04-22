@@ -1,6 +1,7 @@
 /' Patron ADAPTER '/
 
 @startuml
+!include ../format.puml
 
 interface Rectangle {
     + draw()
@@ -15,8 +16,6 @@ class RectangleAdapter {
 class LegacyRectangle {
     + render()
 }
-
-hide empty members
 
 Rectangle <- Client
 Rectangle <|-- RectangleAdapter

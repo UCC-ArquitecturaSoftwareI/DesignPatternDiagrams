@@ -1,6 +1,7 @@
 /' FACADE '/
 
 @startuml
+!include ../format.puml
 
 class Facade
 
@@ -13,8 +14,6 @@ package "Complex system" <<Node>> {
     class System6 
     class System7 
 }
-
-hide empty members
 
 Facade --> System1
 Facade --> System2

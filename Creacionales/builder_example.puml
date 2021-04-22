@@ -1,6 +1,7 @@
 /' Patron BUILDER '/
 
 @startuml
+!include ../format.puml
 
 class Director {
     + Director(DocumentBuilder)

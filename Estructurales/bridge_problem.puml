@@ -1,5 +1,6 @@
 @startuml
 /' BRIDGE '/
+!include ../format.puml
 
 abstract Shape {
     + draw()
